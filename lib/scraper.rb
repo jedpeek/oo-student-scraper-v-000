@@ -9,7 +9,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
     student_names = doc.css(".student-name").text
     student_locations = doc.css(">student-location").text
-    student_link = doc.css(a).text
+     puts student_link = doc.css(a).text
     #name class .student-name
     #location class .student-location
     #first a tag within .student-card class
