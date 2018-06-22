@@ -8,6 +8,7 @@ class Scraper
     html = open(index.html)
     doc = Nokogiri::HTML(html)
     binding.pry
+    doc
     #name class .student-name
     #location class .student-location
     #first a tag within .student-card class
