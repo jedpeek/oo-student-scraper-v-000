@@ -7,7 +7,7 @@ class Scraper
   def self.scrape_index_page(index_url)
     html = open('./fixtures/student-site/index.html')
     doc = Nokogiri::HTML(html)
-    puts doc.css(".student-name").text
+    puts doc.css(".student-name").text + " - "
     #name class .student-name
     #location class .student-location
     #first a tag within .student-card class
