@@ -10,7 +10,7 @@ class Scraper
     student_names = doc.css(".student-name").map{|name| name.text}
     student_locations = doc.css(".student-location").map{|location| location.text}
     student_links = doc.css(".student-card").css("a").map{|link| link['href']}
-    puts student_names.class
+    puts student_locations.class
   end
 
   def self.scrape_profile_page(profile_url)
