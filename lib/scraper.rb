@@ -9,12 +9,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
     student_names = doc.css(".student-name").text
     student_locations = doc.css(".student-location").text
-    student_link = doc.css(".student-card").css("a").map{|link| link['href']}
-    puts student_link
-    #name class .student-name
-    #location class .student-location
-    #first a tag within .student-card class
-
+    student_links = doc.css(".student-card").css("a").map{|link| link['href']}
   end
 
   def self.scrape_profile_page(profile_url)
