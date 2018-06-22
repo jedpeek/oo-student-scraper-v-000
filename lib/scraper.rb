@@ -8,7 +8,7 @@ class Scraper
     html = open('./fixtures/student-site/index.html')
     doc = Nokogiri::HTML(html)
     student_names = doc.css(".student-name").text
-    student_locations = doc.css(">student-location").text
+    student_locations = doc.css(".student-location").text
      puts student_link = doc.css(a).text
     #name class .student-name
     #location class .student-location
