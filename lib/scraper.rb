@@ -13,7 +13,7 @@ class Scraper
 
     i = 0
     while i < student_names.length
-    students = [] << {name: "#{student_names[i]}", location: "#{student_locations[i]}", profile: "#{student_links[i]}"}
+    students << {name: "#{student_names[i]}", location: "#{student_locations[i]}", profile: "#{student_links[i]}"}
     i += 1
   end
   puts students
