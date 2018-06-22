@@ -11,6 +11,7 @@ class Scraper
     student_locations = doc.css(".student-location").map{|location| location.text}
     student_links = doc.css(".student-card").css("a").map{|link| link['href']}
 
+    students = []
     i = 0
     while i < student_names.length
     students << {name: "#{student_names[i]}", location: "#{student_locations[i]}", profile: "#{student_links[i]}"}
