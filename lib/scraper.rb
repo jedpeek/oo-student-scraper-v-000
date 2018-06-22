@@ -9,7 +9,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
     student_names = doc.css(".student-name").text
     student_locations = doc.css(".student-location").text
-    student_link = doc.css(".student-card").css("a").map{|link| puts link['href']}
+    student_link = doc.css(".student-card").css("a").map{|link| link['href']}
     puts student_link
     #name class .student-name
     #location class .student-location
