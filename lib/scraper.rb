@@ -10,7 +10,7 @@ class Scraper
     student_names = doc.css(".student-name").text
     student_locations = doc.css(".student-location").text
     student_link = doc.css(".student-card").css("a")
-    student_link.each{|link| puts link['href']}
+    student_link.map{|link| puts link['href']}
     #name class .student-name
     #location class .student-location
     #first a tag within .student-card class
